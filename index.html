@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CodeWave — Tech Blog</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#f6fbff;
+      --card:#ffffff;
+      --muted:#6b7280;
+      --nav:#0f172a; /* dark navy */
+      --accent:#0ea5a4; /* teal */
+      --accent2:#7c3aed; /* violet */
+    }
+    body{font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; background:var(--bg); color:#0f172a}
+    .navbar{background:var(--nav)}
+    .brand{color:var(--accent);font-weight:700}
+    .nav-link{color:#fff !important}
+
+    .hero{
+      background: linear-gradient(135deg, rgba(14,165,164,0.08), rgba(124,58,237,0.06)), url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+      border-radius:14px; padding:80px 20px; color:#0f172a; margin-top:18px; box-shadow:0 10px 30px rgba(2,6,23,0.06);
+    }
+    .hero h1{font-size:2.8rem; font-weight:800}
+    .btn-accent{background:linear-gradient(90deg,var(--accent),var(--accent2)); color:#fff; border:none}
+
+    .card{border:0; border-radius:12px}
+    .card .card-body{padding:1rem}
+    .post-thumb{height:190px; object-fit:cover; border-radius:8px}
+
+    /* Code snippet */
+    pre.code-box{background:#0b1220;color:#e6eef8;padding:16px;border-radius:8px;overflow:auto}
+    .badge-cat{background:rgba(14,165,164,0.12);color:var(--accent);font-weight:600;padding:6px 10px;border-radius:999px}
+
+    /* Sidebar */
+    .sidebar .list-group-item{border-radius:8px}
+
+    /* Reviews carousel */
+    .review-card{background:linear-gradient(180deg,#fff,#fbfdff);border-radius:12px;padding:16px;box-shadow:0 6px 18px rgba(12,16,40,0.06)}
+
+    footer{background:#071020;color:#b8c4d1;padding:30px 0;margin-top:40px;border-radius:8px}
+
+    @media(min-width:992px){
+      .hero{padding:100px}
+      .hero h1{font-size:3.4rem}
+    }
+  </style>
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+      <a class="navbar-brand brand" href="#">CodeWave</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="nav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#tutorials">Tutorials</a></li>
+          <li class="nav-item"><a class="nav-link" href="#reviews">Gadgets</a></li>
+          <li class="nav-item"><a class="nav-link" href="#guides">Guides</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container mt-4">
+    <!-- HERO -->
+    <section class="hero text-white text-center">
+      <h1>Latest Tech Insights, Hands-on Tutorials & Honest Reviews</h1>
+      <p class="lead text-muted">From web dev walkthroughs to gadget deep dives — practical content for builders and curious minds.</p>
+      <div class="mt-3">
+        <a href="#featured" class="btn btn-accent me-2">Explore Articles</a>
+        <a href="#newsletter" class="btn btn-outline-dark">Subscribe</a>
+      </div>
+    </section>
+
+    <!-- MAIN GRID -->
+    <div class="row mt-4 g-4">
+      <!-- Left: content -->
+      <div class="col-lg-8">
+        <!-- Featured Articles -->
+        <section id="featured">
+          <h4>Featured</h4>
+          <div class="row g-3">
+            <div class="col-md-6">
+              <article class="card">
+                <img class="post-thumb" src="https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?auto=format&fit=crop&w=800&q=80" alt="post">
+                <div class="card-body">
+                  <small class="text-muted">Web Dev • 12 Sep</small>
+                  <h5 class="mt-2">Build a Responsive Navbar with Bootstrap 5</h5>
+                  <p class="text-muted">Step-by-step guide to create accessible and mobile-first navigation.</p>
+                  <a href="#" class="text-decoration-none">Read more →</a>
+                </div>
+              </article>
+            </div>
+            <div class="col-md-6">
+              <article class="card">
+                <img class="post-thumb" src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80" alt="post">
+                <div class="card-body">
+                  <small class="text-muted">AI • 02 Sep</small>
+                  <h5 class="mt-2">AI Tools for Frontend Developers</h5>
+                  <p class="text-muted">How modern AI can speed up prototyping and code generation responsibly.</p>
+                  <a href="#" class="text-decoration-none">Read more →</a>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- Tutorials -->
+        <section id="tutorials" class="mt-4">
+          <h4>Tutorials</h4>
+          <div class="row g-3">
+            <div class="col-md-12">
+              <div class="card p-3">
+                <h6>Quick: Deploy a Static Site with GitHub Pages</h6>
+                <p class="text-muted small">Fast steps to publish your portfolio using GitHub — ideal for beginners.</p>
+                <a href="#" class="text-decoration-none">Follow tutorial →</a>
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div class="card p-3">
+                <h6>Understanding CSS Grid: Practical Examples</h6>
+                <p class="text-muted small">Layouts made easy — real examples and patterns you can reuse.</p>
+                <a href="#" class="text-decoration-none">Read tutorial →</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Code Snippet -->
+        <section id="code" class="mt-4">
+          <h4>Code Snippet</h4>
+          <pre class="code-box"><code>&lt;!-- Responsive navbar --&gt;
+&lt;nav class="navbar navbar-expand-lg"&gt;
+  &lt;div class="container"&gt;
+    &lt;a class="navbar-brand" href="#"&gt;CodeWave&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/nav&gt;
+</code></pre>
+        </section>
+
+        <!-- Guides -->
+        <section id="guides" class="mt-4">
+          <h4>Guides</h4>
+          <div class="row g-3">
+            <div class="col-md-6">
+              <div class="card p-3">
+                <h6>Web Performance: Audit Checklist</h6>
+                <p class="text-muted small">Improve load times, Core Web Vitals and user experience.</p>
+                <a href="#" class="text-decoration-none">Read guide →</a>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="card p-3">
+                <h6>Accessible Forms: Best Practices</h6>
+                <p class="text-muted small">Create inclusive forms with labels, error handling and ARIA attributes.</p>
+                <a href="#" class="text-decoration-none">Read guide →</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+
+      <!-- Right: Sidebar -->
+      <aside class="col-lg-4">
+        <div class="sidebar p-3">
+          <!-- Search -->
+          <div class="mb-3">
+            <input class="form-control" placeholder="Search articles...">
+          </div>
+
+          <!-- Popular Posts -->
+          <h6 class="mb-2">Popular</h6>
+          <ul class="list-group mb-3">
+            <li class="list-group-item d-flex justify-content-between align-items-start">
+              <div>
+                <div class="fw-bold">React vs Vue: When to choose?</div>
+                <small class="text-muted">Web Dev • 10 Sep</small>
+              </div>
+              <span class="badge bg-light text-dark">⭐</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-start">
+              <div>
+                <div class="fw-bold">Best budget laptops 2025</div>
+                <small class="text-muted">Gadgets • 01 Sep</small>
+              </div>
+              <span class="badge bg-light text-dark">🔥</span>
+            </li>
+          </ul>
+
+          <!-- Gadget Reviews Carousel -->
+          <h6>Gadget Reviews</h6>
+          <div id="reviewCarousel" class="carousel slide mb-3" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="review-card text-center">
+                  <img src="https://images.unsplash.com/photo-1517256064527-09c73fc73e63?auto=format&fit=crop&w=800&q=80" class="img-fluid mb-2" style="height:140px; object-fit:cover; border-radius:8px">
+                  <h6 class="mb-1">Apple AirPods Pro Review</h6>
+                  <small class="text-muted">Comfortable, great ANC.</small>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="review-card text-center">
+                  <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=800&q=80" class="img-fluid mb-2" style="height:140px; object-fit:cover; border-radius:8px">
+                  <h6 class="mb-1">Dell XPS 13 (2025)</h6>
+                  <small class="text-muted">Compact, powerful, premium.</small>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#reviewCarousel" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button>
+            <button class="carousel-control-next" type="button" data-bs-target="#reviewCarousel" data-bs-slide="next"><span class="carousel-control-next-icon"></span></button>
+          </div>
+
+          <!-- Tags -->
+          <h6>Tags</h6>
+          <div class="d-flex flex-wrap gap-2 mb-3">
+            <span class="badge bg-light text-dark">javascript</span>
+            <span class="badge bg-light text-dark">css</span>
+            <span class="badge bg-light text-dark">ai</span>
+            <span class="badge bg-light text-dark">gadgets</span>
+          </div>
+
+          <!-- Newsletter CTA -->
+          <div class="mb-3 p-3" style="background:linear-gradient(90deg,rgba(14,165,164,0.08), rgba(124,58,237,0.06)); border-radius:12px">
+            <h6>Weekly Digest</h6>
+            <p class="small text-muted">Top tutorials, reviews & tools every Friday.</p>
+            <div class="d-flex gap-2">
+              <input class="form-control" placeholder="Your email">
+              <button class="btn btn-accent">Subscribe</button>
+            </div>
+          </div>
+
+        </div>
+      </aside>
+    </div>
+
+    <!-- Full width: Resources -->
+    <section class="mt-5">
+      <h4>Resources & Tools</h4>
+      <div class="row g-3 mt-2">
+        <div class="col-md-4">
+          <div class="card p-3">
+            <h6>Starter Dev Toolkit</h6>
+            <p class="small text-muted">Editors, extensions & CLI tools to boost productivity.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card p-3">
+            <h6>Chrome DevTools Guide</h6>
+            <p class="small text-muted">Inspect, debug & optimize with practical tips.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card p-3">
+            <h6>Free Icon Sets</h6>
+            <p class="small text-muted">Handpicked icons for interfaces and prototypes.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter wide -->
+    <section id="newsletter" class="mt-5 text-center">
+      <div class="card p-4 shadow-sm">
+        <h5>Join the CodeWave Newsletter</h5>
+        <p class="text-muted">Get curated tutorials, product reviews and career tips every week.</p>
+        <div class="row justify-content-center">
+          <div class="col-md-6 d-flex gap-2">
+            <input class="form-control" placeholder="Enter your email">
+            <button class="btn btn-accent">Subscribe</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container text-center">
+      <p class="mb-1">© 2025 CodeWave — Built for curious devs</p>
+      <div>
+        <a href="#" class="text-decoration-none text-light me-3"><i class="fab fa-github"></i></a>
+        <a href="#" class="text-decoration-none text-light me-3"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="text-decoration-none text-light"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
